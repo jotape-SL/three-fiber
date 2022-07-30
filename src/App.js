@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles.css';
+import styled from 'styled-components';
 
-function App() {
+import Background from './components/Background';
+import TextSection from './components/TextSection';
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper className='App'>
+      <Background />
+      <TextSection />
+    </Wrapper>
   );
 }
 
-export default App;
+const Wrapper = styled.div`
+  position: relative;
+  background: #1f1144;
+`;
