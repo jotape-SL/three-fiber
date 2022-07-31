@@ -9,6 +9,7 @@ import { OrbitControls } from '@react-three/drei';
 import Background from './components/Background';
 import TextSection from './components/TextSection';
 import Box from './components/Box';
+import Sphere from './components/AnimatedSphere';
 
 export default function App() {
   return (
@@ -21,6 +22,14 @@ export default function App() {
         <directionalLight position={[-2, 5, 2]} intensity={1} />
         <Suspense fallback={null}>
           <Box />
+        </Suspense>
+      </Canvas>
+      <Canvas className='canvas'>
+        <OrbitControls enableZoom={false} />
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[-2, 5, 2]} intensity={1} />
+        <Suspense fallback={null}>
+          <Sphere />
         </Suspense>
       </Canvas>
     </Wrapper>
