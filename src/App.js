@@ -1,8 +1,9 @@
+import React, { Suspense } from 'react';
 import './styles.css';
 import styled from 'styled-components';
 import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
-import {OrbitControls}
+import { OrbitControls } from '@react-three/drei';
 
 //components
 import Background from './components/Background';
@@ -15,9 +16,12 @@ export default function App() {
       <Background />
       <TextSection />
       <Canvas className='canvas'>
+        <OrbitControls enableZoom={false} />
         <ambientLight intensity={0.5} />
         <directionalLight position={[-2, 5, 2]} intensity={1} />
-        <Box />
+        <Suspense fallback={null}>
+          <Box />
+        </Suspense>
       </Canvas>
     </Wrapper>
   );
