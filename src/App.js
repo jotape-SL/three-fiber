@@ -10,6 +10,7 @@ import Background from './components/Background';
 import TextSection from './components/TextSection';
 import Box from './components/Box';
 import Sphere from './components/AnimatedSphere';
+import Lightsaber from './components/Lightsaber';
 
 export default function App() {
   return (
@@ -30,6 +31,14 @@ export default function App() {
         <directionalLight position={[-2, 5, 2]} intensity={1} />
         <Suspense fallback={null}>
           <Sphere />
+        </Suspense>
+      </Canvas>
+      <Canvas className='canvas'>
+        <OrbitControls enableZoom={false} />
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[-2, 5, 2]} intensity={1} />
+        <Suspense fallback={null}>
+          <Lightsaber />
         </Suspense>
       </Canvas>
     </Wrapper>
