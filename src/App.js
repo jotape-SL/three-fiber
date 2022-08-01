@@ -1,5 +1,6 @@
-import React, { Suspense } from 'react';
 import './styles.css';
+//dependencies
+import React, { Suspense } from 'react';
 import styled from 'styled-components';
 import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
@@ -35,8 +36,9 @@ export default function App() {
       </Canvas>
       <Canvas className='canvas'>
         <OrbitControls enableZoom={false} />
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[-2, 5, 2]} intensity={1} />
+        <ambientLight intensity={3} />
+        <directionalLight position={[1, -5, 0]} intensity={1} />
+        <directionalLight position={[0, 5, -1]} intensity={1} />
         <Suspense fallback={null}>
           <Lightsaber />
         </Suspense>
