@@ -1,5 +1,6 @@
-import React, { Suspense } from 'react';
 import './styles.css';
+//dependencies
+import React, { Suspense } from 'react';
 import styled from 'styled-components';
 import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
@@ -10,6 +11,7 @@ import Background from './components/Background';
 import TextSection from './components/TextSection';
 import Box from './components/Box';
 import Sphere from './components/AnimatedSphere';
+import Lightsaber from './components/Lightsaber';
 
 export default function App() {
   return (
@@ -30,6 +32,15 @@ export default function App() {
         <directionalLight position={[-2, 5, 2]} intensity={1} />
         <Suspense fallback={null}>
           <Sphere />
+        </Suspense>
+      </Canvas>
+      <Canvas className='canvas'>
+        <OrbitControls enableZoom={false} />
+        <ambientLight intensity={3} />
+        <directionalLight position={[1, -5, 0]} intensity={1} />
+        <directionalLight position={[0, 5, -1]} intensity={1} />
+        <Suspense fallback={null}>
+          <Lightsaber />
         </Suspense>
       </Canvas>
     </Wrapper>
