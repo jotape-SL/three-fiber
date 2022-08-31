@@ -44,9 +44,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ## ✒️ Autores
 
 * João Pedro de Sousa Cruz - *Desenvolvedor* - [Jotape_SL](https://github.com/jotape-SL)
-* Alura - *Design* 
 
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT - veja o arquivo [LICENSE.md](https://github.com/jotape-SL/Pomodoro/blob/main/LICENSE) para detalhes.
