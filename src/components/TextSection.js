@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   gap: 20px;
   text-align: center;
   margin: 0 auto;
-  padding: 140px 20px 100px;
+  padding: 140px 20px 0;
 `;
 
 const Title = styled.h1`
