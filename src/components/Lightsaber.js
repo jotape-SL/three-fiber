@@ -13,38 +13,30 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('/lightsaber.gltf');
   return (
     <group {...props} dispose={null}>
-      <group>
-        <group rotation={[Math.PI / 2, 0, 0]}>
-          <group position={[0, -3.2, 0]} scale={[0.1, 0.02, 0.1]}>
-            <mesh
-              geometry={nodes.Object_4.geometry}
-              material={materials.Prata}
-            />
-            <mesh
-              geometry={nodes.Object_5.geometry}
-              material={materials.Preto}
-            />
-            <mesh
-              geometry={nodes.Object_6.geometry}
-              material={materials.Dourado}
-            />
-            <mesh
-              geometry={nodes.Object_7.geometry}
-              material={materials.Bronzeado}
-            />
-            <mesh
-              geometry={nodes.Object_8.geometry}
-              material={materials['Prata.001']}
-            />
-            <mesh
-              geometry={nodes.Object_9.geometry}
-              material={materials.BrilhoAzul}
-            />
-            <mesh
-              geometry={nodes.Object_10.geometry}
-              material={materials['BrilhoAzul.001']}
-            />
-          </group>
+      <group rotation={[Math.PI / 2, 0, 0]} scale={6}>
+        <group position={[0, -3.2, 0]} scale={[0.1, 0.02, 0.1]}>
+          <mesh geometry={nodes.Object_4.geometry} material={materials.Prata} />
+          <mesh geometry={nodes.Object_5.geometry} material={materials.Preto} />
+          <mesh
+            geometry={nodes.Object_6.geometry}
+            material={materials.Dourado}
+          />
+          <mesh
+            geometry={nodes.Object_7.geometry}
+            material={materials.Bronzeado}
+          />
+          <mesh
+            geometry={nodes.Object_8.geometry}
+            material={materials['Prata.001']}
+          />
+          <mesh
+            geometry={nodes.Object_9.geometry}
+            material={materials.BrilhoAzul}
+          />
+          <mesh
+            geometry={nodes.Object_10.geometry}
+            material={materials['BrilhoAzul.001']}
+          />
         </group>
       </group>
     </group>

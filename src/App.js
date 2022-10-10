@@ -34,12 +34,12 @@ export default function App() {
           <Sphere />
         </Suspense>
       </Canvas>
-      <Canvas className='canvas'>
+      <Canvas className='canvas' camera={{ position: [0, -30, 0] }}>
         <OrbitControls enableZoom={false} />
-        <ambientLight intensity={3} />
-        <directionalLight position={[1, -5, 0]} intensity={1} />
-        <directionalLight position={[0, 5, -1]} intensity={1} />
         <Suspense fallback={null}>
+          <ambientLight intensity={1} />
+          <pointLight position={[-5, 20, 10]} intensity={2.5} />
+          <pointLight position={[-5, 0, 10]} intensity={2.5} />
           <Lightsaber />
         </Suspense>
       </Canvas>
