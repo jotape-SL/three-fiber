@@ -53,5 +53,11 @@ const Wrapper = styled.div`
 
   canvas {
     height: 500px;
+    &:hover {
+      cursor: grab;
+    }
+    &:active {
+      cursor: grabbing;
+    }
   }
 `;
