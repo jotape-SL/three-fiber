@@ -28,7 +28,7 @@ $npm start
 ```
 ## 🕸 Link para o site ``(Deploy feito pelo Vercel)``
 
-- **[Em breve](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley)**
+- **[Three Fiber](https://three-fiber-5o2y.vercel.app/)**
 
 
 ## 🛠 Tecnologias
